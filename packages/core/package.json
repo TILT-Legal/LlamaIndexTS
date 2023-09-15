@@ -3,7 +3,8 @@
   "version": "0.0.28",
   "dependencies": {
     "@anthropic-ai/sdk": "^0.6.2",
-    "@notionhq/client": "^2.2.13",
+    "@notionhq/client": "^2.2.12",
+    "js-tiktoken": "^1.0.7",
     "lodash": "^4.17.21",
     "md-utils-ts": "^2.0.0",
     "mongodb": "^6.0.0",
@@ -12,9 +13,8 @@
     "papaparse": "^5.4.1",
     "pdf-parse": "^1.1.1",
     "rake-modified": "^1.0.8",
-    "replicate": "^0.18.0",
-    "tiktoken-node": "^0.0.6",
-    "uuid": "^9.0.1",
+    "replicate": "^0.16.1",
+    "uuid": "^9.0.0",
     "wink-nlp": "^1.14.3"
   },
   "devDependencies": {

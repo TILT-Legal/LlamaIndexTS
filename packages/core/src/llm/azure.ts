@@ -66,7 +66,7 @@ export function getAzureConfigFromEnv(
 }
 
 export function getAzureBaseUrl(config: AzureOpenAIConfig): string {
-  return `${config.endpoint}/openai/deployments/${config.deploymentName}`;
+  return `https://${config.endpoint}.openai.azure.com/openai/deployments/${config.deploymentName}`;
 }
 
 export function getAzureModel(openAIModel: string) {

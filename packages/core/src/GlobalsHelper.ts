@@ -1,3 +1,4 @@
+import { getEncoding } from "js-tiktoken";
 import { v4 as uuidv4 } from "uuid";
 import { Event, EventTag, EventType } from "./callbacks/CallbackManager";
 
@@ -12,8 +13,7 @@ class GlobalsHelper {
 
   tokenizer() {
     if (!this.defaultTokenizer) {
-      const tiktoken = require("tiktoken-node");
-      this.defaultTokenizer = tiktoken.getEncoding("gpt2");
+      this.defaultTokenizer = getEncoding("gpt2");
     }
 
     return this.defaultTokenizer!.encode.bind(this.defaultTokenizer);
@@ -21,8 +21,7 @@ class GlobalsHelper {
 
   tokenizerDecoder() {
     if (!this.defaultTokenizer) {
-      const tiktoken = require("tiktoken-node");
-      this.defaultTokenizer = tiktoken.getEncoding("gpt2");
+      this.defaultTokenizer = getEncoding("gpt2");
     }
 
     return this.defaultTokenizer!.decode.bind(this.defaultTokenizer);
